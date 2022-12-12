@@ -1,6 +1,6 @@
 /* global document */
 
-const ready = function(fn) {
+const ready = function (fn) {
   if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
     fn();
   } else {
