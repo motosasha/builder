@@ -5,11 +5,8 @@
 @import "../off-canvas/off-canvas.scss";
 @import "../page/page.scss";
 
-
-
 .blocks-library {
-
-  $block-name:                &; // #{$block-name}__element
+  $block-name: &; // #{$block-name}__element
 
   &__title {
     font-weight: 400;
@@ -26,7 +23,7 @@
     }
 
     &:before {
-      content: '.' attr(data-id);
+      content: "." attr(data-id);
       position: absolute;
       top: -1.2rem;
       left: 0;
@@ -94,7 +91,7 @@
       width: 30px;
       height: 3px;
       left: 0;
-      content: '';
+      content: "";
     }
 
     &:before {

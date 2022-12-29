@@ -10,7 +10,7 @@
     "requireConfigFile": false
   },
   "rules": {
-    "prettier/prettier": "error",
+    "prettier/prettier": ["error", { "endOfLine": "auto" }],
     "strict": 0
   }
 }

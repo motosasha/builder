@@ -2,12 +2,20 @@
   "syntax": "postcss-scss",
   "extends": [
     "stylelint-config-standard-scss",
-    "stylelint-config-rational-order",
-    "stylelint-prettier/recommended"
+    "stylelint-prettier/recommended",
+    "stylelint-config-rational-order"
   ],
   "plugins": [
     "stylelint-order",
-    "stylelint-scss"
+    "stylelint-scss",
+    "stylelint-config-rational-order/plugin"
   ],
-  "rules": {}
+  "rules": {
+    "order/properties-order": [],
+    "plugin/rational-order": [
+      true, {
+      "border-in-box-model": false,
+      "empty-line-between-groups": true
+    }]
+  }
 }

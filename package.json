@@ -18,7 +18,9 @@
     "wlib": "cross-env BUILD_LIBRARY=true gulp",
     "build": "cross-env MODE=production gulp build",
     "lint-staged": "lint-staged",
-    "deploy": "gulp deploy"
+    "deploy": "gulp deploy",
+    "stylelint": "stylelint src/**/*.scss",
+    "stylelint:fix": "npm run stylelint -- --fix"
   },
   "lint-staged": {
     "*.{js,pug,md}": "editorconfig-cli",

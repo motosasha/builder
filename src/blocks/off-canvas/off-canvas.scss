@@ -2,30 +2,28 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
-$off-canvas-width:            250px !default; // ширина этого блока
-$transition-time:             .3s;
+$off-canvas-width: 250px !default; // ширина этого блока
+$transition-time: 0.3s;
 
 .off-canvas {
-
-  $block-name:                &; // #{$block-name}__element
+  $block-name: &; // #{$block-name}__element
 
   position: relative;
   overflow: hidden;
 
   .js &--open {
-
     #{$block-name}__overlay {
       position: fixed;
       z-index: 1;
-      opacity: 1;
       visibility: visible;
+      opacity: 1;
       transition: opacity $transition-time ease;
     }
 
     #{$block-name}__close {
       z-index: 1;
-      opacity: 1;
       visibility: visible;
+      opacity: 1;
     }
 
     #{$block-name}__aside {
@@ -40,9 +38,9 @@ $transition-time:             .3s;
   &__aside {
     max-height: 30vh;
     overflow-y: auto;
-    backface-visibility: hidden;
-    background-color: $gray-darkest;
     color: #fff;
+    background-color: $gray-darkest;
+    backface-visibility: hidden;
     transition: transform $transition-time ease;
 
     .js & {
@@ -62,19 +60,18 @@ $transition-time:             .3s;
   }
 
   &__menu-item {
-
     &--separator {
+      margin-bottom: 10px;
       padding-bottom: 10px;
       border-bottom: 1px solid $gray;
-      margin-bottom: 10px;
     }
   }
 
   &__menu-link {
     display: block;
     padding: 8px 14px;
-    line-height: 1.2;
     color: inherit;
+    line-height: 1.2;
     text-decoration: none;
 
     &:hover,
@@ -92,13 +89,13 @@ $transition-time:             .3s;
 
   &__overlay {
     position: absolute;
-    z-index: -1;
     top: 0;
     left: 0;
+    z-index: -1;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.2);
-    opacity: 0;
+    background: rgb(0 0 0 / 20%);
     visibility: hidden;
+    opacity: 0;
   }
 }
